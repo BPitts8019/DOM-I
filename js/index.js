@@ -39,7 +39,7 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // setup Nav Bar
 let navBar = document.querySelectorAll("header nav a");
@@ -64,7 +64,7 @@ topContent[1].children[0].textContent = siteContent["main-content"]["about-h4"];
 topContent[1].children[1].textContent = siteContent["main-content"]["about-content"];
 
 //-- middle image
-let midImage = document.querySelector(".middle-img");
+let midImage = document.querySelector("#middle-img");
 midImage.src = siteContent["main-content"]["middle-img-src"];
 
 //-- bottom content
