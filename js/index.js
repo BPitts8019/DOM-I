@@ -42,10 +42,24 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // setup Nav Bar
-let navBar = document.querySelectorAll("header nav a");
-navBar.forEach((anchor, idx) => {
+let navBarLinks = document.querySelectorAll("header nav a");
+navBarLinks.forEach((anchor, idx) => {
+   anchor.style.color = "green";
    anchor.textContent = siteContent.nav[`nav-item-${idx+1}`];
 });
+
+//Add extra links
+let setupAnchor = (text, link) => {
+   let rtnAnchor = document.createElement("a");
+   rtnAnchor.href = link || "#";
+   rtnAnchor.textContent = text || "Click Me!";
+   rtnAnchor.style.color = "green";
+
+   return rtnAnchor;
+};
+let navBar = document.querySelector("header nav");
+navBar.appendChild( setupAnchor(null, "https://www.google.com/") );
+navBar.prepend( setupAnchor("YouTube", "https://www.youtube.com/") );
 
 // Setup cta section
 let ctaH1 = document.querySelector(".cta-text h1");
