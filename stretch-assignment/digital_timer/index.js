@@ -16,7 +16,7 @@
       numMiliseconds = 0;
 
       digits.forEach(digit => {
-         digit.textContent = "0";
+         digit.textContent = "-";
          digit.classList.remove("redDigit");
       });
       document.querySelector("#colon").classList.remove("redDigit");
